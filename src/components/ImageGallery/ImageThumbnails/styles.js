@@ -1,4 +1,5 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
+import Img from 'gatsby-image';
 
 export const ImageThumbnailWrapper = styled.div`
   cursor: pointer;
@@ -8,4 +9,13 @@ export const ImageThumbnailWrapper = styled.div`
   background-color: #fbfbfc;
   transition: all 0.3s ease;
   transform: scale(${props => (props.isActive ? '1.03' : '1')});
+  overflow: hidden;
+`;
+
+export const ImageGatsbyComponent = styled(Img)`
+  transition: all 0.3s ease;
+  
+  &:hover {
+    transform: scale(1.2);
+  }
 `;
