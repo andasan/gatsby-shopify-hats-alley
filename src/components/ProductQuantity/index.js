@@ -13,7 +13,7 @@ export const ProductQuantity = ({ variantId, available }) => {
 
   const handleQuantity = value => {
     const radixed = parseInt(value, 10); // 07 ---> 7
-    setQuantity(radixed);
+    setQuantity(Math.max(0, radixed)); //set min to 0 and max to any input value
   };
 
   const submitHandler = e => {
