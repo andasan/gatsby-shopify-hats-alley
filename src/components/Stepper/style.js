@@ -14,6 +14,11 @@ export const StepperButton = styled.button`
   transition: 0.3s all ease;
   outline: none;
 
+  &:hover {
+    background-color: #8D99AE;
+    color: white;
+  }
+
   &:disabled {
     opacity: 0.5;
   }
