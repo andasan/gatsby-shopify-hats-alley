@@ -30,7 +30,7 @@ export const CartContents = () => {
               {item.variant.title === 'Default Title' ? '' : item.variant.title}
             </div>
           </div>
-          <div>{item.variant.price}</div>
+          <div>${item.variant.price}</div>
           <div><QuantityAdjust item={item} onAdjust={handelAdjustQuantity} /></div>
           <div>${(item.quantity * item.variant.price).toFixed(2)}</div>
           <div><RemoveCartItem lineItemId={item.id} /></div>

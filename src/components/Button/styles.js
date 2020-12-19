@@ -23,7 +23,7 @@ export const ButtonWrapper = styled.button`
   &:hover:not([disabled]) {
     color: #151515;
     border-color: #f9e95e;
-    box-shadow: inset 0 0 10px 50px rgba(249, 233, 94, 1);
+    box-shadow: inset 0 0 10px 50px rgba(255, 183, 3, 1);
   }
 
   &:disabled {

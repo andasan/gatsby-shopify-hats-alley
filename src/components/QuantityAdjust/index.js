@@ -1,5 +1,7 @@
 import React from 'react';
-import { QuantityAdjustWrapper, AdjustButton } from './styles';
+import { QuantityAdjustWrapper } from './styles';
+
+import { Stepper } from '../Stepper';
 
 export function QuantityAdjust({ item, onAdjust }) {
   const { quantity } = item;
@@ -14,10 +16,10 @@ export function QuantityAdjust({ item, onAdjust }) {
 
   return (
     <QuantityAdjustWrapper>
-      <AdjustButton onClick={handleDecrementQuantity} className="down"
+      <Stepper onClick={handleDecrementQuantity} className="down"
         aria-label="-" />
       <div>{quantity}</div>
-      <AdjustButton onClick={handleIncrementQuantity} className="up"
+      <Stepper onClick={handleIncrementQuantity} className="up"
         aria-label="+" />
     </QuantityAdjustWrapper>
   );

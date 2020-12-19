@@ -2,6 +2,7 @@ export * from './SEO';
 export * from './Layout';
 export * from './ImageGallery';
 export * from './Button';
+export * from './Stepper';
 export * from './ProductQuantity';
 export * from './Header';
 export * from './Logo';

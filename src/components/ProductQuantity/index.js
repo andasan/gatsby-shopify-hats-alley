@@ -1,8 +1,9 @@
 import React, { useState, useContext } from 'react';
 
-import { FormWrapper, QuantityInput, StepperButton } from './styles';
+import { FormWrapper, QuantityInput } from './styles';
 
 import { Button } from '../Button';
+import { Stepper } from '../Stepper';
 import CartContext from 'context/CartContext';
 
 export const ProductQuantity = ({ variantId, available }) => {
@@ -31,7 +32,7 @@ export const ProductQuantity = ({ variantId, available }) => {
         value={quantity}
         onChange={e => handleQuantity(e.target.value)}
       />
-      <StepperButton
+      <Stepper
         disabled={!available}
         type="button"
         onClick={() => handleQuantity(quantity + 1)}
@@ -39,7 +40,7 @@ export const ProductQuantity = ({ variantId, available }) => {
         className="up"
         aria-label="+"
       />
-      <StepperButton
+      <Stepper
         disabled={!available}
         type="button"
         onClick={() => handleQuantity(quantity - 1)}
