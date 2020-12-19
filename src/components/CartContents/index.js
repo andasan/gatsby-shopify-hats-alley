@@ -5,6 +5,7 @@ import { navigate } from '@reach/router';
 import { CartHeader, CartItem, CartFooter, Footer, EmptyCart } from './styles';
 
 import { Button } from '../Button';
+import { RemoveCartItem } from '../RemoveCartItem';
 import { QuantityAdjust} from '../QuantityAdjust';
 
 export const CartContents = () => {
@@ -32,7 +33,7 @@ export const CartContents = () => {
           <div>{item.variant.price}</div>
           <div><QuantityAdjust item={item} onAdjust={handelAdjustQuantity} /></div>
           <div>${(item.quantity * item.variant.price).toFixed(2)}</div>
-          <div>Remove cart icon</div>
+          <div><RemoveCartItem lineItemId={item.id} /></div>
         </CartItem>
       ))}
       {!!checkout?.lineItems && (
