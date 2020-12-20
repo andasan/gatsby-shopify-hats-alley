@@ -9,3 +9,5 @@ export * from './Logo';
 export * from './Cart';
 export * from './CartContents';
 export * from './QuantityAdjust';
+export * from './HomepageCollections';
+export * from './FeaturedProducts';
