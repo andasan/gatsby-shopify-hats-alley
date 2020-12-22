@@ -2,11 +2,11 @@ import React from 'react';
 import { LayoutWrapper } from './styles';
 import { Header } from '../Header';
 
-const Layout = ({ children }) => {
+const Layout = ({ children, path }) => {
   return (
     <>
-      <Header />
-      <LayoutWrapper>
+      <Header isHome={path === '/'} />
+      <LayoutWrapper isHome={path === '/'}>
         <main>{children}</main>
       </LayoutWrapper>
     </>

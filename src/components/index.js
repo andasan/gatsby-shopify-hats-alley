@@ -10,4 +10,5 @@ export * from './Cart';
 export * from './CartContents';
 export * from './QuantityAdjust';
 export * from './HomepageCollections';
+export * from './HeroTile';
 export * from './FeaturedProducts';

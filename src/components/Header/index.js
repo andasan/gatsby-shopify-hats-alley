@@ -5,9 +5,9 @@ import { HeaderWrapper, LogoContainer } from './styles';
 import { Logo } from '../Logo';
 import { Cart } from '../Cart';
 
-export const Header = () => {
+export const Header = ({ isHome }) => {
   return (
-    <HeaderWrapper>
+    <HeaderWrapper isHome={isHome} >
       <LogoContainer>
         <Logo />
       </LogoContainer>

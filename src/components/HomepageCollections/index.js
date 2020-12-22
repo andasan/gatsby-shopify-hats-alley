@@ -1,19 +1,20 @@
 import React from 'react';
 import { CollectionTile } from '../CollectionTile';
+import { HeroTile } from '../HeroTile';
 import { RemainingCollections } from './styles';
 
 export function HomepageCollections({ collections }) {
   const saleCollection = collections?.find(
-    collection => collection.title === 'SALE'
+    collection => collection.title === 'One goal, one passion - Hats.'
   );
   const remainingCollections = collections?.filter(
-    collection => collection.title !== 'SALE'
+    collection => collection.title !== 'One goal, one passion - Hats.'
   );
 
   return (
     <div>
       {!!saleCollection && (
-        <CollectionTile
+        <HeroTile
           sale
           destination={`/all-products?c=${encodeURIComponent(
             saleCollection.shopifyId
@@ -39,4 +40,3 @@ export function HomepageCollections({ collections }) {
     </div>
   );
 }
-

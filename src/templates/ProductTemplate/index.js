@@ -17,20 +17,7 @@ import CartContext from 'context/CartContext';
 export const query = graphql`
   query ProductQuery($shopifyId: String) {
     shopifyProduct(shopifyId: { eq: $shopifyId }) {
-      shopifyId
-      title
-      description
-      images {
-        #   forgot to query for the image id
-        id
-        localFile {
-          childImageSharp {
-            fluid(maxWidth: 300) {
-              ...GatsbyImageSharpFluid_withWebp
-            }
-          }
-        }
-      }
+      ...ShopiftProductFields
     }
   }
 `;

@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
 export const RemainingCollections = styled.div`
+  width: 960px;
+  margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   > div {

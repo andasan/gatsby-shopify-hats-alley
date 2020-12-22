@@ -1,4 +1,5 @@
 import React, {useContext} from 'react';
+import { useLocation } from '@reach/router';
 import {
   Layout,
   SEO,
@@ -9,10 +10,11 @@ import ProductContext from 'context/ProductContext';
 
 const IndexPage = () => {
   const { collections } = useContext(ProductContext);
-console.log(collections);
+  const {search, pathname } = useLocation();
+  console.log(pathname)
   return (
-    <Layout>
-      <SEO description="The Hats Alley Homepage" title="Homepage" />
+    <Layout path={pathname}>
+      <SEO description="Hats Alley Homepage" title="Hats Alley Homepage" />
       <HomepageCollections
         collections={
           collections.filter(
@@ -20,9 +22,6 @@ console.log(collections);
           ) || []
         }
       />
-      {!!collections.find(
-        collection => collection.title === 'Featured Hats'
-      ) && <FeaturedProducts />}
     </Layout>
   );
 };
