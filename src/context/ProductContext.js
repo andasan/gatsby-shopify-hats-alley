@@ -1,22 +1,39 @@
-import React, {createContext} from 'react';
+import React, { createContext } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 
 const query = graphql`
+  fragment ProductTileFields on ShopifyProduct {
+    handle
+    priceRange {
+      minVariantPrice {
+        amount
+      }
+    }
+  }
   {
-    allShopifyCollection {
+    allShopifyProduct {
       edges {
         node {
-          products  {
-            ...ShopiftProductFields
+          ...ShopifyProductFields
+          ...ProductTileFields
+        }
+      }
+    }
+    allShopifyCollection(sort: { fields: title, order: ASC })  {
+      edges {
+        node {
+          products {
+            ...ShopifyProductFields
+            ...ProductTileFields
           }
           title
           description
           shopifyId
-          image{
-            localFile{
-              childImageSharp{
-                fluid(maxWidth: 1200){
-                   ...GatsbyImageSharpFluid_withWebp
+          image {
+            localFile {
+              childImageSharp {
+                fluid(maxWidth: 1200) {
+                  ...GatsbyImageSharpFluid_withWebp
                 }
               }
             }
@@ -25,7 +42,7 @@ const query = graphql`
       }
     }
   }
-`
+`;
 
 const defaultState = {
   products: [],
@@ -35,11 +52,11 @@ const ProductContext = createContext(defaultState);
 export default ProductContext;
 
 export function ProductContextProvider({ children }) {
-  const {allShopifyCollection} = useStaticQuery(query)
+  const { allShopifyCollection, allShopifyProduct } = useStaticQuery(query);
   return (
     <ProductContext.Provider
       value={{
-        products: [],
+        products: allShopifyProduct.edges.map(({ node }) => node) || [],
         collections: allShopifyCollection.edges.map(({ node }) => node) || [],
       }}
     >

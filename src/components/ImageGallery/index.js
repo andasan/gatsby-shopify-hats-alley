@@ -9,7 +9,6 @@ export function ImageGallery({ selectedVariantImageId, images }) {
   );
 
   useEffect(() => {
-    console.log("selected: ", selectedVariantImageId);
     setActiveThumbnail(
       images.find(({ id }) => id === selectedVariantImageId) || images[0]
     );

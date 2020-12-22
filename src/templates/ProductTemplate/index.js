@@ -17,7 +17,7 @@ import CartContext from 'context/CartContext';
 export const query = graphql`
   query ProductQuery($shopifyId: String) {
     shopifyProduct(shopifyId: { eq: $shopifyId }) {
-      ...ShopiftProductFields
+      ...ShopifyProductFields
     }
   }
 `;

@@ -8,7 +8,7 @@ export function ProductsGrid({ products }) {
       {products.map(product => (
         <ProductTile
           handle={product.handle}
-          minPrice={product?.priceRange?.minVariantPrice?.amount}
+          minPrice={product.priceRange.minVariantPrice.amount}
           description={product.description}
           imageFluid={product.images[0].localFile.childImageSharp.fluid}
           key={product.shopifyId}

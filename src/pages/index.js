@@ -10,8 +10,7 @@ import ProductContext from 'context/ProductContext';
 
 const IndexPage = () => {
   const { collections } = useContext(ProductContext);
-  const {search, pathname } = useLocation();
-  console.log(pathname)
+  const { pathname } = useLocation();
   return (
     <Layout path={pathname}>
       <SEO description="Hats Alley Homepage" title="Hats Alley Homepage" />

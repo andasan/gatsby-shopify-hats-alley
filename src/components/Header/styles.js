@@ -1,14 +1,5 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import { StyledLink } from '../StyledLink';
-
-const fullWidthStyles = ({ isHome }) => {
-  if (isHome) {
-    return css`
-      z-index: 100;
-      background: transparent;
-    `;
-  }
-};
 
 export const HeaderWrapper = styled.header`
   display: flex;
@@ -22,10 +13,4 @@ export const HeaderWrapper = styled.header`
 
 export const LogoContainer = styled(StyledLink).attrs(() => ({
   to: '/',
-}))`
-    img{
-        @media (max-width: 768px) {
-            height: 50px;
-          }
-    }
-`;
+}))``;

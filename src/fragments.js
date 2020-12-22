@@ -1,7 +1,7 @@
 import { graphql } from 'gatsby';
 
 export const ProductFields = graphql`
-  fragment ShopiftProductFields on ShopifyProduct {
+  fragment ShopifyProductFields on ShopifyProduct {
     shopifyId
     title
     description
