@@ -28,5 +28,4 @@ export const LogoContainer = styled(StyledLink).attrs(() => ({
             height: 50px;
           }
     }
-  
 `;

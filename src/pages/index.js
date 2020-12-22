@@ -22,6 +22,9 @@ const IndexPage = () => {
           ) || []
         }
       />
+      {!!collections.find(
+        collection => collection.title === 'Featured Hats'
+      ) && <FeaturedProducts />}
     </Layout>
   );
 };

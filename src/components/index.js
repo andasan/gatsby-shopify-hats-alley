@@ -12,3 +12,5 @@ export * from './QuantityAdjust';
 export * from './HomepageCollections';
 export * from './HeroTile';
 export * from './FeaturedProducts';
+export * from './ProductsGrid';
+export * from './ProductTile';
