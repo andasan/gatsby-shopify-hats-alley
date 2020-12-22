@@ -71,11 +71,17 @@ export const Title = styled.div`
   margin-bottom: 5px;
   display: inline-block;
   text-transform: uppercase;
-  font-size: 3rem;
+  font-size: 2rem;
+  line-height: 2rem;
   font-weight: bold;
   border-radius: 10px;
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.75);
-//   background: ${props => (props.sale ? 'red' : 'none')};
+  @media (min-width: 768px) {
+    font-size: 2.5rem;
+  }
+  @media (min-width: 1024px) {
+    font-size: 3rem;
+  }
 `;
 
 export const Description = styled.div`

@@ -22,4 +22,11 @@ export const HeaderWrapper = styled.header`
 
 export const LogoContainer = styled(StyledLink).attrs(() => ({
   to: '/',
-}))``;
+}))`
+    img{
+        @media (max-width: 768px) {
+            height: 50px;
+          }
+    }
+  
+`;

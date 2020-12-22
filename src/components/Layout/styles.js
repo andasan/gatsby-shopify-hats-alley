@@ -6,4 +6,8 @@ export const LayoutWrapper = styled.div`
   max-width: ${({isHome}) => (isHome ? '100vw' : '960px')};
   box-sizing: border-box;
   padding: ${({isHome}) => (isHome ? 'none' : '0 20px 40px 20px')};
+
+  @media (max-width: 425px){
+    max-width: 400px;
+  }
 `
