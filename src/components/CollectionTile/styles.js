@@ -39,7 +39,6 @@ export const CollectionTileContent = styled.div`
       width: 100px;
       background-color: #3cc3c1;
       color: #fff;
-      border: 3px solid #d8f3dc;
       border-radius: 6px;
       font-weight: 700;
       letter-spacing: 0.1em;

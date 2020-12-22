@@ -41,9 +41,9 @@ export const HeroTileContent = styled.div`
     padding: 20px;
     ${StyledLink} {
         padding: 22px;
-        background-color: #3cc3c1;
+        background-color: #d00000;
         color: #fff;
-        border: 3px solid #d8f3dc;
+        // border: 3px solid #d8f3dc;
         border-radius: 6px;
         font-weight: 700;
         letter-spacing: 0.1em;
