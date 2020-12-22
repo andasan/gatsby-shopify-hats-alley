@@ -36,28 +36,32 @@ export const HeroTileContent = styled.div`
   height: 100%;
   color: white;
   text-decoration: none;
-  //   background: rgba(0, 0, 0, 0.1);
   text-align: center;
   > div {
     padding: 20px;
     ${StyledLink} {
-      padding: 4px 17px;
-      background: white;
-      border: 2px solid;
-      border-radius: 6px;
-      font-weight: bold;
-      font-size: 16px;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      display: inline-block;
-      color: black;
-      text-decoration: none;
-      cursor: pointer;
-      transition: all 250ms ease-in-out;
-      &:hover {
-        color: white;
-        background: black;
-      }
+        padding: 22px;
+        background-color: #3cc3c1;
+        color: #fff;
+        border: 3px solid #d8f3dc;
+        border-radius: 6px;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        text-decoration: none;
+        text-align: center;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+      
+        &:focus {
+          outline: none;
+        }
+      
+        &:hover:not([disabled]) {
+          color: #151515;
+          border-color: #f9e95e;
+          box-shadow: inset 0 0 10px 50px rgba(255, 183, 3, 1);
+        }
     }
   }
 `;
@@ -76,8 +80,6 @@ export const Title = styled.div`
 
 export const Description = styled.div`
   font-size: 20px;
-  margin: 10px;
-  border-radius: 10px;
-//   background: ${props => (props.sale ? 'red' : 'none')};
+  margin: 20px 0 50px;
   padding: 10px;
 `;
