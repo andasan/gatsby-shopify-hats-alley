@@ -16,7 +16,7 @@ export function HeroTile({
       <StyledBackground fluid={backgroundImage} isDarken={isDarken} key={isDarken ? `dark` : `light`} />
       <HeroTileContent>
         <div>
-          <Title sale={sale}>{title}</Title>
+          <Title>One goal, one passion - Hats.</Title>
           <Description sale={sale}>{description}</Description>
           <StyledLink to={destination}>Shop now</StyledLink>
         </div>

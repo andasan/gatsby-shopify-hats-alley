@@ -4,7 +4,7 @@ import { StyledLink } from '../StyledLink';
 export const CartWrapper = styled(StyledLink).attrs(() => ({
     to: '/cart',
 }))`
-    margin-left: auto;
+    margin-left: 15px;
     text-decoration: none;
     color: inherit;
 

@@ -5,10 +5,10 @@ import { RemainingCollections } from './styles';
 
 export function HomepageCollections({ collections }) {
   const saleCollection = collections?.find(
-    collection => collection.title === 'One goal, one passion - Hats.'
+    collection => collection.title === 'SALE'
   );
   const remainingCollections = collections?.filter(
-    collection => collection.title !== 'One goal, one passion - Hats.'
+    collection => collection.title !== 'SALE'
   );
 
   return (
