@@ -10,13 +10,27 @@ export const ProductTileWrapper = styled.div`
   flex-direction: column;
 
   > ${StyledLink} {
-    border: 1px solid black;
+    padding: 22px 0;
+    background-color: #3cc3c1;
+    color: #fff;
+    // border-radius: 6px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
     text-decoration: none;
-    display: block;
-    padding: 10px;
     text-align: center;
-    font-weight: bold;
-    color: black;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:hover:not([disabled]) {
+      color: #151515;
+      border-color: #f9e95e;
+      box-shadow: inset 0 0 10px 50px rgba(255, 183, 3, 1);
+    }
   }
 `;
 

@@ -13,7 +13,7 @@ const IndexPage = () => {
   const { pathname } = useLocation();
   return (
     <Layout path={pathname}>
-      <SEO description="Hats Alley Homepage" title="Hats Alley Homepage" />
+      <SEO description="HatsAlley Homepage" title="HatsAlley Homepage" />
       <HomepageCollections
         collections={
           collections.filter(
